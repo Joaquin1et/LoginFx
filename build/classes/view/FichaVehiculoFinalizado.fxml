@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.FichaVehiculoFinalizadoController">
+   <children>
+      <Pane prefHeight="602.0" prefWidth="1024.0" style="-fx-background-image: url(images/fondoAdmin.jpg);" />
+      <Label alignment="CENTER" prefHeight="42.0" prefWidth="1024.0" text="Vehículo Reparado" textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutY="41.0" prefHeight="561.0" prefWidth="300.0">
+         <children>
+            <Label text="Nombre y Apellidos:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_nomApellidos">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Teléfono:" textFill="#eeeeee">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_telefono">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_email">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Día de Ingreso:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_diaIngreso" alignment="CENTER" prefHeight="25.0" prefWidth="239.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="130.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Día de Salida:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_diaSalida" alignment="CENTER">
+               <VBox.margin>
+                  <Insets left="20.0" right="130.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="710.0" layoutY="41.0" prefHeight="561.0" prefWidth="300.0">
+         <children>
+            <Label text="Marca:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_marca">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Modelo:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_modelo">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Color:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_color">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Kilómetros:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_kilometros">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Matrícula:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_matricula">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Número de Motor:" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_numMotor">
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="326.0" layoutY="39.0" prefHeight="553.0" prefWidth="359.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="375.0" text="Tabajo a Realizar" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="txt_trabajoRealizar" prefHeight="129.0" prefWidth="364.0" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="362.0" text="Observaciones" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txt_observaciones" prefHeight="118.0" prefWidth="359.0" />
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="362.0" text="Precio de la reparación" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_precioReparacion" alignment="CENTER" prefHeight="25.0" prefWidth="213.0">
+               <VBox.margin>
+                  <Insets left="80.0" right="80.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="btn_actualizarFichaVehiculo" mnemonicParsing="false" onAction="#ActualizarFichaVehiculo" prefHeight="29.0" prefWidth="151.0" style="-fx-background-radius: 5px;" text="Actualizar Ficha">
+               <font>
+                  <Font name="Georgia Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="105.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_eliminarFichaVehiculo" mnemonicParsing="false" onAction="#EliminarFichaVehiculo" prefHeight="29.0" prefWidth="151.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-background-color: #F12C2C; -fx-border-color: #020202;" stylesheets="@../css/stylescoches.css" text="Eliminar Ficha" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="105.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="313.0" layoutY="570.0" prefHeight="15.0" prefWidth="359.0" text="© Creado por ENYJO SYSTEM." textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

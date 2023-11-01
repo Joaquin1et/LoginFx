@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="contenAreaFichaCandidatos" prefHeight="602.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FichaCandidatosController">
+   <children>
+      <Pane prefHeight="602.0" prefWidth="1024.0" style="-fx-background-image: url(images/fondoAdmin.jpg);">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" prefHeight="50.0" prefWidth="782.0" text="Información del Candidato" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmb_valoracion" layoutX="850.0" layoutY="50.0" prefHeight="25.0" prefWidth="123.0" promptText="VALORACIÓN">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <VBox layoutY="45.0" prefHeight="557.0" prefWidth="255.0">
+               <children>
+                  <Label fx:id="lbl_imagenCandidato" contentDisplay="GRAPHIC_ONLY" prefHeight="107.0" prefWidth="90.0" style="-fx-border-color: #FCED81; -fx-border-width: 5px; -fx-border-radius: 5px;" text="Label">
+                     <graphic>
+                        <ImageView fx:id="lv_imagenCandidato" fitHeight="158.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Nombre y Apellidos:" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txt_nomCandidato">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Fecha de Nacimiento:" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txt_fechaNaci">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Teléfono:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_telefono">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Email:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_email">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="btn_actualizarCandidato" mnemonicParsing="false" onAction="#ActualizarCandidato" style="-fx-background-radius: 5px; -fx-border-radius: 5px;" text="Actualizar Candidato">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="45.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_eliminarCandidato" mnemonicParsing="false" onAction="#EliminarCandidato" prefHeight="29.0" prefWidth="181.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #020202; -fx-background-color: #F12C2C;" text="Eliminar Candidato" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="45.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="75.0" prefHeight="15.0" prefWidth="570.0" text="Formación" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txt_formacion" layoutX="350.0" layoutY="105.0" prefHeight="100.0" prefWidth="570.0" />
+            <Label alignment="CENTER" layoutX="350.0" layoutY="220.0" prefHeight="25.0" prefWidth="570.0" text="Experiencia" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txt_experiencia" layoutX="350.0" layoutY="250.0" prefHeight="143.0" prefWidth="570.0" />
+            <Label alignment="CENTER" layoutX="350.0" layoutY="415.0" prefHeight="15.0" prefWidth="570.0" text="Observaciones" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txt_observaciones" layoutX="350.0" layoutY="439.0" prefHeight="109.0" prefWidth="570.0" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="303.0" layoutY="570.0" prefHeight="15.0" prefWidth="731.0" text="© Creado por ENYJO SYSTEM." textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="contenAreaProcesoSeleccion" prefHeight="600.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProcesoSeleccionController">
+   <children>
+      <VBox prefHeight="46.0" prefWidth="837.0">
+         <children>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+            <Pane prefHeight="25.0" prefWidth="837.0">
+               <children>
+                  <HBox prefHeight="24.0" prefWidth="837.0" style="-fx-background-color: #296A19;">
+                     <children>
+                        <Button fx:id="btn_nuevoCandidato" mnemonicParsing="false" onAction="#ir_NuevoCandidato" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Nuevo Candidato">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btn_gestionCandidatos" mnemonicParsing="false" onAction="#Ir_gestionCandidatos" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Gestión de Candidatos">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btn_procesoSeleccion" mnemonicParsing="false" onAction="#ir_procesoSeleccion" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Proceso de selección">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+         </children>
+      </VBox>
+      <Pane layoutY="45.0" prefHeight="563.0" prefWidth="837.0" style="-fx-background-image: url(images/fondoAdmin.jpg);">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="837.0" text="Candidatos Seleccionados">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbl_candidatosSeleccionados" layoutX="42.0" layoutY="57.0" onMouseClicked="#FichaCandidatoSeleccionado" prefHeight="414.0" prefWidth="727.0">
+              <columns>
+                <TableColumn fx:id="colum_nomApellidos" prefWidth="219.0" text="Nombre y Apellidos" />
+                <TableColumn fx:id="colum_fechaNaci" minWidth="0.0" prefWidth="123.0" text="Fecha de Nacimiento" />
+                  <TableColumn fx:id="colum_email" prefWidth="225.0" text="Email" />
+                  <TableColumn fx:id="colum_telefono" minWidth="0.0" prefWidth="159.0" text="Teléfono" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutY="550.0" prefHeight="15.0" prefWidth="837.0" text="© Creado por ENYJO SYSTEM." textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

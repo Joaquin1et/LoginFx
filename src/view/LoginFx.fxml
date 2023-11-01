@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFxController">
+   <children>
+      <Label contentDisplay="GRAPHIC_ONLY" prefHeight="450.0" prefWidth="800.0" text="Label">
+         <graphic>
+            <ImageView fitHeight="451.0" fitWidth="919.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fondoAdmin.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <HBox prefHeight="450.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="450.0" prefWidth="350.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="94.0" prefWidth="350.0" text="LOGIN" textFill="WHITE" translateY="50.0">
+                     <font>
+                        <Font name="Elephant" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="351.0" text="Usuarío" textFill="WHITE" translateY="60.0">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usuario_txt" alignment="CENTER" maxWidth="250.0" prefHeight="30.0" prefWidth="100.0" translateX="53.0" translateY="70.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="352.0" text="Clave" textFill="WHITE" translateY="90.0">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password_txt" alignment="CENTER" maxWidth="250.0" prefHeight="30.0" prefWidth="100.0" translateX="53.0" translateY="100.0" />
+                  <Button fx:id="btn_login" mnemonicParsing="false" onAction="#Login" prefHeight="34.0" prefWidth="123.0" text="Entrar" translateX="110.0" translateY="130.0">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="450.0" prefWidth="445.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="132.0" prefWidth="447.0" text="Coches Domingo " textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="GRAPHIC_ONLY" prefHeight="230.0" prefWidth="445.0" text="Label">
+                     <graphic>
+                        <ImageView fitHeight="258.0" fitWidth="354.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" translateX="40.0">
+                           <image>
+                              <Image url="@../images/cocheV.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="445.0" text="© Creado por ENYJO SYSTEM." translateY="50.0">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

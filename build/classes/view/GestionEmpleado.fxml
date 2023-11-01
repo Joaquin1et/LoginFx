@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="contenGestiEmpleado" prefHeight="600.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionEmpleadoController">
+   <children>
+      <VBox prefHeight="46.0" prefWidth="837.0">
+         <children>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+            <Pane prefHeight="25.0" prefWidth="837.0" style="-fx-background-color: #296A19;">
+               <children>
+                  <HBox prefHeight="24.0" prefWidth="837.0">
+                     <children>
+                        <Button fx:id="btn_nuevoEmple" mnemonicParsing="false" onAction="#Ir_nuevoEmple" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Nuevo Empleado">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_gestionEmpleados" mnemonicParsing="false" onAction="#ir_gestionEmple" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Gestión de Empleados">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_seleccion" mnemonicParsing="false" onAction="#ir_seleccion" prefHeight="24.0" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Selección">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+         </children>
+      </VBox>
+      <Pane layoutY="45.0" prefHeight="563.0" prefWidth="837.0" style="-fx-background-image: url(images/fondoAdmin.jpg);">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="837.0" text="Gestión Empleado" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbl_personal" layoutX="45.0" layoutY="57.0" onMouseClicked="#IrFichaEmpleado" prefHeight="413.0" prefWidth="727.0">
+              <columns>
+                  <TableColumn fx:id="colum_nom_Apellidos" prefWidth="197.0" text="Nombre y Apellidos" />
+                <TableColumn fx:id="colum_email" minWidth="0.0" prefWidth="169.0" text="Email" />
+                <TableColumn fx:id="colum_telefono" prefWidth="127.0" text="Teléfono" />
+                  <TableColumn fx:id="colum_departamento" minWidth="0.0" prefWidth="120.0" text="Departamento" />
+                  <TableColumn fx:id="colum_categoria" prefWidth="113.0" text="Categoría" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutY="550.0" prefHeight="15.0" prefWidth="837.0" text="© Creado por ENYJO SYSTEM." textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

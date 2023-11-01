@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="contenAreaEnReparacion" prefHeight="603.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnReparacionController">
+   <children>
+      <VBox prefHeight="46.0" prefWidth="837.0">
+         <children>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+            <Pane prefHeight="25.0" prefWidth="837.0" style="-fx-background-color: #296A19;">
+               <children>
+                  <HBox prefHeight="24.0" prefWidth="837.0">
+                     <children>
+                        <Button fx:id="btn_ordenServicio" mnemonicParsing="false" onAction="#irOrdenServicio" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Orden De Servicio ">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_enReparacion" mnemonicParsing="false" onAction="#irEnReparacion" prefWidth="279.0" style="-fx-background-radius: 7px;" text="En Reparación">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_ordenFinalizada" mnemonicParsing="false" onAction="#irOrdenFinalizada" prefWidth="279.0" style="-fx-background-radius: 7px;" text="Orden Finalizada">
+                           <font>
+                              <Font name="Georgia Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox prefHeight="10.0" prefWidth="837.0" styleClass="redPane" stylesheets="@../css/stylescoches.css" />
+         </children>
+      </VBox>
+      <Pane layoutY="44.0" prefHeight="559.0" prefWidth="837.0" style="-fx-background-image: url(images/fondoAdmin.jpg);">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="837.0" text="Vehículos en Reparación" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbl_vehiculo" layoutX="45.0" layoutY="57.0" onMouseClicked="#IrFichaVehiculo" prefHeight="413.0" prefWidth="727.0">
+              <columns>
+                <TableColumn fx:id="colum_nom_Apellidos" prefWidth="185.0" text="Nombre y Apellidos" />
+                <TableColumn fx:id="colum_telefono" prefWidth="111.0" text="Teléfono" />
+                  <TableColumn fx:id="colum_marca" prefWidth="129.0" text="Marca" />
+                  <TableColumn fx:id="colum_modelo" prefWidth="166.0" text="Modelo" />
+                  <TableColumn fx:id="colum_matricula" prefWidth="135.0" text="Matrícula" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="560.0" prefHeight="15.0" prefWidth="811.0" text="© Creado por ENYJO SYSTEM." textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
